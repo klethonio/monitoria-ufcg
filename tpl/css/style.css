@@ -1,0 +1,698 @@
+/* 
+    Created on : 01/02/2016, 18:10:05
+    Author     : Klethônio Ferreira
+*/
+*{
+    color: #333;
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 14px;
+}
+object[type="application/gas-events-cef"]{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: #428bca;
+}
+a:hover{
+    color: rgba(35, 82, 124, 1);
+    text-decoration: underline;
+}
+small.obs{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    color: #b00;
+}
+small.count-char{
+    color: #666;
+}
+.block{
+    display: block;
+}
+::-webkit-scrollbar-track {
+    background-color: #D1ECF7;
+    border-radius: 5px;
+}
+::-webkit-scrollbar {
+    height: 6px;
+    width: 10px;
+    background: #D1ECF7;
+}
+::-webkit-scrollbar-thumb {
+    background: #428bca;
+    border-radius: 5px;
+}
+#site{
+    padding: 20px;
+    margin: 0px auto;
+    width: 85%;
+}
+#site > header{
+    padding: 25px 0;
+    border: #357ebd 1px solid;
+    box-shadow: 2px 2px 10px 0px #999;
+    padding-left: 90px;
+    margin-bottom: 20px;
+    background: url(../images/brasao.ufcg.png) 2% center no-repeat;
+}
+@media (min-width: 1300px){
+    #site > header{
+        text-align: center;
+        padding-left: 0;
+        background: url(../images/brasao.ufcg.png) 2% center no-repeat, url(../images/computacao.png) 98% center no-repeat;
+    }
+}
+#site > header a:hover{
+    text-decoration: none;
+}
+#site > header h1{
+    display: inline;
+    cursor: pointer;
+    color: #428bca;
+}
+#site > header h1:hover{
+    color: #357ebd;
+    text-decoration: underline;
+}
+
+.abtnBlue{
+    border: 0px;
+    padding: 0px 15px;
+    text-transform: uppercase;
+    color: #fff !important;
+    cursor: pointer;
+    display: inline-block;
+}
+.abtnBlue{
+    background-color: rgba(35, 82, 124, 1);
+}
+.abtnBlue:hover{
+    background-color: #357ebd;
+    text-decoration: none;
+}
+/**************************************
+/**************** MENU ****************
+**************************************/
+#site > nav{
+    padding-left: 20px;
+    text-align: left;
+    background: #428bca;
+    margin-bottom: 20px;
+}
+#site > nav ul{
+    line-height: 33px;
+    list-style: none;
+}
+#site > nav ul li a{
+    background: #428bca;
+    padding:0 20px;
+    display: block;
+    color: #fff;
+}
+#site > nav ul li a:hover{
+    text-decoration: none;
+    background: #357ebd;
+}
+#site > nav ul li a.btn-home{
+    background: #fff;
+    color: #428bca;
+    border-left: 2px;
+    border-right: 2px;
+    font-weight: bold;
+}
+#site > nav ul li a.btn-home:hover{
+    box-shadow: 0 0 5px 1px #fff;
+}
+#site > nav ul li a{
+    position: relative;
+}
+#site > nav ul li small{
+    position: absolute;
+    background: #f00;
+    top: 10px;
+    right: 5px;
+    line-height: 13px;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0 5px 0 5px;
+}
+#site > nav ul li ul{
+    border: 1px solid #357ebd;
+    border-top: 0;
+    z-index: 9999;
+    display: none;
+}
+#site > nav ul li:hover ul{
+    display: block;
+    position: absolute;    
+}
+#site > nav ul li ul li{
+    display: block;
+}
+/**************************************
+/************** CONTENT ***************
+**************************************/
+#site #content{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    padding: 30px 25px 25px 25px;
+    border: #357ebd 1px solid;
+    box-shadow: 2px 2px 10px 0px #999;
+    margin-bottom: 20px;
+}
+#site #content .count-down{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #357ebd;
+    padding: 2px;
+    color: #357ebd;
+    background: #D1ECF7;
+    text-align: right;
+}
+/************** CLASSES **************/
+#site #content #h1-classes{
+    margin-bottom: 10px;
+}
+#site #content .class{
+    text-align: center;
+    display: block;
+}
+#site #content .class a:hover{
+    font-weight: bolder;
+    zoom: 150%;
+}
+/************ SIMPLE FORM ************/
+#site #content .simple-form{
+    text-align: center;
+    padding-top: 20px;
+}
+#site #content .simple-form label{
+    margin: 3px auto;
+    display: block;
+    width: 40%;
+}
+#site #content .simple-form label, #site #content form ul{
+    text-align: left;
+}
+#site #content .simple-form label > span{
+    font-weight: bold;
+    display: block;
+}
+#site #content .simple-form p{
+    margin-top: 50px;
+}
+#site #content .simple-form .p-notes{
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px;
+    padding: 2px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/************ SEARCH FORM ************/
+#site #content .search-form{
+    text-align: left;
+}
+#site #content .search-form label{
+    display: inline-block;
+    font-weight: bold;
+}
+#site #content .search-form input, #site #content .search-form select{
+    margin-right: 5px;
+}
+#site #content .search-form label > span{
+    display: block;
+}
+#site #content .search-form p{
+    margin-top: 20px;
+}
+/************ DATA-USER **************/
+@media (min-width: 768px){
+    #site #content #data-user .right{
+        width: 30%;
+        text-align: right;
+        display: inline-block;
+    }
+}
+@media (max-width: 768px){
+    #site #content #data-user .right{
+        width: 50%;
+        text-align: right;
+        display: inline-block;
+    }
+}
+
+#site #content .statistics{
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 4px solid #ccc;
+    max-width: 550px;
+    margin-top: 10px;
+}
+/************ ACTIVITES **************/
+#site #content #activities{
+    overflow-x: auto;
+}
+#site #content #activities table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 30px;
+    text-align: center;
+    min-width: 750px;
+}
+#site #content #activities table tbody tr.success{
+    background: #dff0d8;
+}
+#site #content #activities table tbody tr.success:hover{
+    background: #d0e9c6;
+}
+#site #content #activities table tbody tr.error{
+    background: #f2dede;
+}
+#site #content #activities table tbody tr.error:hover{
+    background: #ebcccc;
+}
+#site #content #activities table tbody tr.alert{
+    background: #FFF6BF;
+}
+#site #content #activities table tbody tr.alert:hover{
+    background: #f8eb9f;
+}
+#site #content #activities table tbody tr.infor{
+    background: #D1ECF7;
+}
+#site #content #activities table tbody tr.infor:hover{
+    background: #afdaeb;
+}
+#site #content #activities table thead td{
+    border-bottom: #999 2px solid;
+    font-weight: bold;
+}
+#site #content #activities table tbody td{
+    border-bottom: #999 1px solid;
+}
+#site #content #activities table tbody:last-child{
+    border-bottom: #999 2px solid;
+}
+#site #content #activities table tbody td img{
+    vertical-align: middle;
+}
+#site #content #activities div#code{
+    line-height: 15px;
+    font-size: 10pt;
+}
+#site #content #activities div#code ol{
+    padding: 15px 0 15px 40px;
+}
+#site #content #activities div#code a.float{
+    float: right;
+    position: relative;
+    margin-right: 5px;
+    margin-top: 5px;
+
+}
+#site #content #activities div#code a .msgCopy{
+    display: none;
+    top:110%;
+    position: absolute;
+    right: 0;
+    padding: 5px;
+    color: #fff;
+    background:#428bca;
+    opacity: .8;
+    border:1px solid #428bca;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+}
+#site #content #activities div#code a .msgCopy:before {
+    content:'';
+    position:absolute;
+    right:-1px;
+    top:-7px;
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-bottom:7px solid #428bca
+}
+#site #content #activities div#code small a.float{
+    margin-top:10px;
+}
+#site #content #activities div#code .fortran{
+    tab-size: 4;
+}
+/************** LISTS ****************/
+#site #content #lists{
+    overflow-x: auto;
+}
+#site #content #lists table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 30px;
+    text-align: center;
+    min-width: 750px;
+}
+#site #content #lists table tbody tr{
+    background: #f0f0f0;
+}
+#site #content #lists table tbody tr:hover{
+    background: #dfdfdf;
+}
+#site #content #lists table thead td{
+    border-bottom: #999 2px solid;
+    font-weight: bold;
+}
+#site #content #lists table .thead-date td{
+    border-bottom-color: #357ebd;
+    border-bottom-style: dashed;
+}
+#site #content #lists table tbody td{
+    border-bottom: #999 1px solid;
+}
+#site #content #lists table tbody:last-child{
+    border-bottom: #999 2px solid;
+}
+#site #content #lists table tbody td img{
+    vertical-align: middle;
+}
+/************ TABLE EXCEL ************/
+#site #content #activities .tab{
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 20px;
+}
+#site #content #activities .tab tbody tr.bg-tr{
+    background: #eee;
+}
+#site #content #activities .tab tbody tr:hover{
+    background: #ccc;
+}
+#site #content #select-tabs{
+    list-style: none;
+    margin: 5px;
+}
+#site #content #select-tabs li{
+    color: #fff;
+    margin-right: 5px;
+    display: inline-block;
+    background: #999;
+    padding: 2px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+
+}
+/************* STUDENTS **************/
+#site #content #students{
+    overflow-x: auto;
+}
+#site #content #students table{
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 30px;
+    text-align: center;
+    min-width: 800px;
+}
+#site #content #students table tbody tr{
+    background: #f0f0f0;
+}
+#site #content #students table tbody tr:hover{
+    background: #dfdfdf;
+}
+#site #content #students table thead td{
+    border-bottom: #999 2px solid;
+    font-weight: bold;
+}
+#site #content #students table tbody td{
+    border-bottom: #999 1px solid;
+    padding: 0px 5px;
+}
+#site #content #students table tbody:last-child{
+    border-bottom: #999 2px solid;
+}
+#site #content #students table tbody td img{
+    vertical-align: middle;
+}
+/**************************************
+/*************** FOOTER ***************
+**************************************/
+#site > footer{
+    background-image: linear-gradient(#ccc, #fff);
+    padding: 5px;
+    border: #357ebd 1px solid;
+    box-shadow: 2px 2px 10px 0px #999;
+    text-align: center;
+}
+#site footer small{
+    display: block;
+}
+
+
+/**************************************
+/********** BOTÕES e INPUTS ***********
+**************************************/
+input, textarea{
+    border: 1px solid #999;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+    resize: none;
+}
+input:focus, textarea:focus{
+    border: 1px solid #357ebd;
+    box-shadow: #428bca 0px 0px 5px;
+}
+input[type="text"], input[type="password"], input[type="date"], input[name="fileList"], textarea, select{
+    width: 100%;
+}
+select{
+    padding: 4px;
+}
+.formFile{
+    padding: 0 !important;
+}
+.label-file{
+    display: block;
+    width: 28px !important;
+    height: 28px !important;
+    cursor: pointer;
+    margin: 0 !important;
+}
+.label-file.fortran{
+    background: url(../images/send-fortran.png) no-repeat;    
+}
+.label-file.matlab{
+    background: url(../images/send-matlab.png) no-repeat;    
+}
+.label-file.c{
+    background: url(../images/send-c.png) no-repeat;    
+}
+.label-file.cpp{
+    background: url(../images/send-cpp.png) no-repeat;    
+}
+.label-file.pdf{
+    background: url(../images/send-pdf.png) no-repeat;    
+}
+.label-file.excel{
+    background: url(../images/send-excel.png) no-repeat;    
+}
+.label-file.zipada{
+    background: url(../images/send-zip.png) no-repeat;    
+}
+input#file{
+    top: -1000px;
+    left: -1000px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    text-align: right;
+}
+.btnBlue, .btnRed, .btnGreen{
+    outline: none;
+    text-decoration: none !important;
+    border: 0px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    color: #fff !important;
+    cursor: pointer;
+    margin: 5px 0px;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+.btnBlue{
+    background-color: rgba(35, 82, 124, 1);
+}
+.btnBlue:hover{
+    background-color: #357ebd;
+}
+.btnRed{
+    background: #FF4646;
+}
+.btnRed:hover{
+    background: #f00;
+}
+.btnGreen{
+    background: #009900;
+}
+.btnGreen:hover{
+    background: #18bb00;
+}
+/**************************************
+/************ CSS TRIGGER *************
+**************************************/
+.msg{position: relative; padding: 20px; color: #333; background: #ccc; border: 1px solid #333; font:400 14px 'Verdana', sans-serif; margin-bottom: 10px;}
+.msg{border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
+.msg.success{background-color: #E5F8CE; border-color: #D0F1A6;}
+.msg.infor{background-color: #D1ECF7; border-color: #BCDFEF;}
+.msg.alert{background-color: #FFF6BF; border-color: #FCEB77;}
+.msg.error{background-color: #FAD0D0; border-color: #F6ABAB;}
+/**************************************
+/************* ALERT DEL **************
+**************************************/
+.span-al{
+    padding:10px;
+    border:1px solid #F60;
+    font:bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-variant:small-caps;
+    background:#FFFFBF;
+}
+.span-al p{
+    color:#F60;
+}
+#mask{
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+}
+#window-del, #window-atv{
+    position:fixed;
+    display:none;
+    z-index:9999;
+}
+/**************************************
+/************ WINDOW SOBRE ************
+**************************************/
+.window-about{
+    padding:0 10px 10px 10px;
+    border:1px solid #000;
+    background-color:#fff;
+    position:fixed;
+    display:none;
+    z-index:9999;
+}
+.window-about > span{
+    padding-right: 10px;
+    text-align: right;
+    border-bottom:1px solid #000;
+    margin: 0 -10px;
+    display: block;
+}
+.window-about > span a{
+    padding: 0;
+    cursor: pointer;
+    color: #000;
+} 
+/**************************************
+/************* OUTROS CSS *************
+**************************************/
+.text-right{
+    text-align: left;
+}
+.debug{z-index:9999; left:0px; top:0px; padding:15px; background:rgba(0, 0, 0, .5); color:#fff; font-size: 9pt; line-height: 12px; position: fixed;}
+.float-right{
+    float: right;
+}
+.notes{
+    border: 1px solid #999;
+    background: #dfdfdf;
+    color: #666;
+    padding: 10px;
+}
+#loading{
+    display: none;
+    text-align: center;
+    height: 30px;
+    text-indent: -9999px;
+    background: url(../images/loading.gif) 50% 0 no-repeat;
+
+}
+.loading{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    border: 1px solid #000;
+    background: #fff;
+    height: 30px;
+    width: 30px;
+}
+.paginator{padding-top:5px; margin-top:5px; text-align:center; font-weight: bold;}
+.paginator a{text-transform:lowercase; text-decoration:none; color:#357ebd; padding:0 6px; border-radius: 10px;}
+.paginator .curentPag{padding:0 6px;}
+.paginator a:hover{background:#357ebd; color:#FFF;}
+
+@media all and (min-width: 500px){
+    #site > nav ul li{
+        display: inline-block;
+    }
+    #site #content .simple-form label{
+        min-width: 360px;
+    }
+}
+@media not all and (min-width: 500px){
+    
+    #site #content {
+        padding: 30px 10px 25px 10px;
+    }
+
+    #site > nav ul li{
+        display: block;
+    }
+    #site > header h1{
+        font-size: 14pt;
+    }
+
+    /**************************************
+    /************ SIMPLE FORM *************
+    **************************************/
+    #site #content .simple-form label{
+        width: 100%;
+    }
+    /**************************************
+    /********** BOTÕES e INPUTS ***********
+    **************************************/
+    input[type="text"], input[type="password"], input[type="date"], input[name="fileList"], textarea, select{
+        width: 100%;
+        display: table-cell;
+    }
+    /**************************************
+    /************** STUDENTS **************
+    **************************************/
+    #site #content #students.limit-height{
+        overflow-y: auto;
+        height: 300px;
+    }
+}
